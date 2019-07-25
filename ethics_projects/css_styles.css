@@ -1,5 +1,6 @@
-body {
+body{
   background-color: #2E80AD;
+  background-size:cover;    
 }
 
 h1 {
@@ -9,4 +10,3 @@ h1 {
 h2 {
   font-weight: bold;
 }
-

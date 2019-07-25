@@ -4,6 +4,7 @@ author: "Jenny Wales"
 date: "23/07/2019"
 output: 
   ioslides_presentation:
+    widescreen: true
     css: css_styles.css
 ---
 
@@ -11,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## What is Facial Recognition Software (FRS)?
+## How does Facial Recognition Software(FRS) work?
 
 1. Your face is captured in a photo or on video
 2. FRS reads the geometry of your face - 68 different facial features
@@ -19,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 FRS learns to do this though machine learning and being fed data sets of images
 
-```{r, out.width="350px", fig.align='center'}
+```{r, fig.align='center'}
 knitr::include_graphics("images/Oakland-face-recognition.png")
 ```
 
@@ -33,20 +34,22 @@ knitr::include_graphics("images/Oakland-face-recognition.png")
 
 [Microsoft Azure demo](https://azure.microsoft.com/en-us/resources/videos/face-identification-demo-1/)
 
+What happens when FRS gets it wrong? 
+
 ## Problems with Bias and Accuracy
 
 ```{r, out.width= "400px", fig.align='center'}
 knitr::include_graphics("images/wgl05.19-joy-buolamwini.jpg")
 ```
 
-* Joy used a FRS in her project which did not recognize her - only worked when she wore a white mask
+* Joy Buolamwini used a FRS in her project which did not recognize her - only worked when she wore a white mask
 * She then ran a study to evaluate how well FRS does at identifying gender in people with different skin colours
 * Error rate was 0.8% for white men - 20-35% for black women
-* This is due to the data sets fed into the FRS - largely white and male
+* This is due to the data sets fed into the FRS - largely white and male faces
 
 ## Problems with Privacy
 
-* Loss of anonymity - government can track you anywhere
+* Loss of anonymity - government can track you anywhere e.g Chinese jaywalkers
 * Police have tracked and arrested protesters using FRS
 * No legislation to make police in the USA remove your image from their database
 * Image databases are vulnerable to hackers
@@ -59,9 +62,10 @@ knitr::include_graphics("images/1521097207582.jpg")
 ## Regulation - Legislation
 
 * GDPR - covers biometric data as a "special category" and specifically mentions "facial images"
-* This means you have to have consent or a really good reason to use it
+* This means you have to have explicit consent or a really good reason to use it
 * Biometric Information Privacy Act (Illinois) - less restrictive then GDPR
-* FSR banned entirely in San Francisco and Oakland
+* Users must be transparent in how they are using FRS - but doesn't apply to the police
+* FRS banned entirely in San Francisco and Oakland
 
 [Ban Facial Recognition Map](https://www.banfacialrecognition.com/map/)
 
@@ -85,19 +89,4 @@ The datasets used to train FRS need to be more inclusive and representative of t
 
 Legislation ensuring self-reporting of bias and errors for all developers and sellers of FRS
 
-BIPA seems like a good compromise to address privacy issues while allowing wider use beyond security
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+BIPA seems like a good compromise to address privacy issues while allowing wider use
